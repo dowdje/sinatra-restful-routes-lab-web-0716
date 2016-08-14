@@ -1,0 +1,9 @@
+<% if @recipe %>
+<p><%= @recipe%> was deleted</p>
+<%end%>
+
+<%@recipes.each do |recipe|%>
+<p><a href='/recipes/<%=recipe.id%>'><%=recipe.name%></a></p>
+<p><%=recipe.ingredients%></p>
+<p><%=recipe.cook_time%></p>
+<%end%>
